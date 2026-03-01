@@ -8,7 +8,7 @@
 # 创建工具目录并复制文件
 $BinDir = "$env:USERPROFILE\bin"
 New-Item -ItemType Directory -Force -Path $BinDir
-Copy-Item "dist\kuake-v1.3.9-windows-amd64.exe" "$BinDir\kuake.exe" -Force
+Copy-Item "dist\kuake-v1.4.0-windows-amd64.exe" "$BinDir\kuake.exe" -Force
 
 # 添加到用户 PATH
 $currentPath = [Environment]::GetEnvironmentVariable("Path", "User")

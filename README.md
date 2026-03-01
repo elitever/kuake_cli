@@ -70,15 +70,15 @@ chmod +x build.sh
 
 **Linux/macOS**:
 ```bash
-wget https://github.com/zhangjingwei/kuake_sdk/releases/latest/download/kuake-v1.3.8-linux-amd64
-chmod +x kuake-v1.3.8-linux-amd64
-./kuake-v1.3.8-linux-amd64 user
+wget https://github.com/zhangjingwei/kuake_sdk/releases/latest/download/kuake-v1.4.0-linux-amd64
+chmod +x kuake-v1.4.0-linux-amd64
+./kuake-v1.4.0-linux-amd64 user
 ```
 
 **Windows**:
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/zhangjingwei/kuake_sdk/releases/latest/download/kuake-v1.3.8-windows-amd64.exe" -OutFile "kuake-v1.3.8-windows-amd64.exe"
-.\kuake-v1.3.8-windows-amd64.exe user
+Invoke-WebRequest -Uri "https://github.com/zhangjingwei/kuake_sdk/releases/latest/download/kuake-v1.4.0-windows-amd64.exe" -OutFile "kuake-v1.4.0-windows-amd64.exe"
+.\kuake-v1.4.0-windows-amd64.exe user
 ```
 
 ## 快速开始
@@ -102,9 +102,9 @@ Invoke-WebRequest -Uri "https://github.com/zhangjingwei/kuake_sdk/releases/lates
 ### 2. 使用 CLI 工具
 
 ```bash
-./kuake-v1.3.8-linux-amd64 user
-./kuake-v1.3.8-linux-amd64 upload "file.txt" "/file.txt"
-./kuake-v1.3.8-linux-amd64 list "/"
+./kuake-v1.4.0-linux-amd64 user
+./kuake-v1.4.0-linux-amd64 upload "file.txt" "/file.txt"
+./kuake-v1.4.0-linux-amd64 list "/"
 ```
 
 ## 配置说明
@@ -325,18 +325,15 @@ export KUAKE_UPLOAD_PARALLEL=8
 
 ## 变更日志
 
-### v1.5.0
+### v1.4.0
 
-- **OpenClaw 技能集成优化**
+- **OpenClaw 技能集成**
+  - 新增 kuake OpenClaw 技能支持
   - 添加环境变量 `KUAKE_COOKIE` 支持，符合 OpenClaw 标准配置方式
   - 认证优先级：`-cookies` 参数 > 环境变量 `KUAKE_COOKIE` > 配置文件
   - 支持通过 `KUAKE_PATH` 环境变量指定完整路径，不依赖 PATH 检测
   - 优化 OpenClaw 技能文档，添加 fallback 逻辑说明
   - 简化部署文档，提供更清晰的配置选项
-
-### v1.4.0
-
-（版本信息待补充）
 
 ### v1.3.9
 
@@ -597,7 +594,9 @@ export KUAKE_UPLOAD_PARALLEL=8
 感谢所有为项目做出贡献的开发者！
 
 - [@Cody292](https://github.com/Cody292) - 并行上传功能（PR #13）
-- 管道模式支持（PR #16, #17, #18）
+- [@Cody292](https://github.com/Cody292) - `--policy` 上传去重策略（PR #16）
+- [@Cody292](https://github.com/Cody292) - user 命令容量查询 + `--version`（PR #17）
+- [@Cody292](https://github.com/Cody292) - 并行上传优化（PR #18）
 
 欢迎提交 Pull Request 或 Issue 来帮助改进项目！
 
